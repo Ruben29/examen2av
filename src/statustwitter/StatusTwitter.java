@@ -33,10 +33,9 @@ public class StatusTwitter {
 
         Paging pagina = new Paging();
 
-        Twitter mitwitter = new TwitterFactory().getInstance();
 
         Query query = new Query("#Cangas");
-        QueryResult result = mitwitter.search(query);
+        QueryResult result = twitter.search(query);
         for (Status status : result.getTweets()) {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
         }
