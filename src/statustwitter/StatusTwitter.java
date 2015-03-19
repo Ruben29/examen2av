@@ -11,6 +11,7 @@ import twitter4j.conf.ConfigurationBuilder;
 
 /**
  * Clase para recobrar los twitts del morrazo
+ *
  * @author damian
  */
 public class StatusTwitter {
@@ -33,7 +34,7 @@ public class StatusTwitter {
         Paging pagina = new Paging();
 
         Twitter mitwitter = new TwitterFactory().getInstance();
- 
+
         Query query = new Query("#Cangas");
         QueryResult result = mitwitter.search(query);
         for (Status status : result.getTweets()) {
